@@ -62,6 +62,9 @@ nav a {
 .about-faq {
   width: 100%;
 }
+.forme-grille {
+  grid-template-columns: 1fr;
+}
 
 .about-faq h2 {
   text-align: center;
