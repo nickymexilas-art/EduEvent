@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Étudiant - EduEvent</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link
+      rel="stylesheet"
+      href="css/responsive.css"
+      media="screen and (max-width:760px)"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="entete">
+        <img src="images/logoueh.png" alt="EduEvent Logo" class="logo" />
+        <div onclick="affichermenu()" id="btn-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="menu">
+          <nav>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="evenements.html">Listes des événements</a></li>
+              <li><a href="detail.html">Détail d'un événement</a></li>
+              <li><a href="profil.html" class="active">Espace étudiant</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a id="contact" href="profil.html">Connexion</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="bloc3">
+      <section id="authentification-section" class="apparition">
+        <div class="forme-bloc3">
+          <div class="forme-changement">
+            <button id="changement-connexion" class="active-changement">
+              Connexion
+            </button>
+            <button id="changement-register">Inscription</button>
+          </div>
+
+          <form id="connexion-forme" class="authentification-forme">
+            <h2>Se connecter</h2>
+            <div class="forme-groupe">
+              <label for="login-email">Votre email </label>
+              <input type="email" id="login-email" required />
+              <span class="error-msg"></span>
+            </div>
+            <div class="forme-groupe">
+              <label for="login-password">Mot de passe </label>
+              <input type="password" id="login-password" required />
+              <span class="error-msg"></span>
+            </div>
+            <button type="submit" class="btn-submit">Se connecter</button>
+          </form>
+
+          <form id="register-forme" class="authentification-forme masque">
+            <h2>Créer un compte</h2>
+            <div class="forme-groupe">
+              <label for="reg-name">Nom complet </label>
+              <input type="text" id="reg-name" required />
+              <span class="error-msg"></span>
+            </div>
+            <div class="forme-groupe">
+              <label for="reg-email">Email </label>
+              <input type="email" id="reg-email" required />
+              <span class="error-msg"></span>
+            </div>
+            <div class="forme-groupe">
+              <label for="reg-photo">Photo de profil</label>
+              <input type="file" id="reg-photo" accept="image/*" />
+              <div id="apercu-bloc3" class="hidden">
+                <img id="reg-apercu" src="" alt="Aperçu de la photo" />
+              </div>
+            </div>
+            <div class="forme-grille">
+              <div class="forme-groupe">
+                <label for="reg-faculty">Faculté </label>
+                <input
+                  type="text"
+                  id="reg-faculty"
+                  required
+                  placeholder="Ex: FSG"
+                />
+              </div>
+              <div class="forme-groupe">
+                <label for="reg-program">Programme </label>
+                <input
+                  type="text"
+                  id="reg-program"
+                  required
+                  placeholder="Ex: Informatique"
+                />
+              </div>
+            </div>
+            <div class="forme-grille">
+              <div class="forme-groupe">
+                <label for="reg-level">Niveau </label>
+                <select id="reg-level" required>
+                  <option value="Licence">Licence</option>
+                  <option value="Master">Master</option>
+                  <option value="Doctorat">Doctorat</option>
+                </select>
+              </div>
+              <div class="forme-groupe">
+                <label for="reg-year">Année d'étude </label>
+                <input
+                  type="number"
+                  id="reg-year"
+                  min="1"
+                  max="7"
+                  required
+                  placeholder="Ex: 3"
+                />
+              </div>
+            </div>
+            <div class="forme-groupe">
+              <label for="reg-password"
+                >Mot de passe (Min. 6 caractères)
+              </label>
+              <input type="password" id="reg-password" required />
+              <span class="error-msg"></span>
+            </div>
+            <button type="submit" class="btn-submit">S'inscrire</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="profile-section" class="masque apparition">
+        <div class="profile-layout">
+          <aside class="profile-card">
+            <div class="profile-avatar-bloc3">
+              <div class="profile-avatar">
+                <img
+                  id="student-photo"
+                  src="https://via.placeholder.com/150"
+                  alt="Photo de l'étudiant"
+                />
+                <label for="update-photo" class="avatar-superposition">
+                  <span>Changer</span>
+                </label>
+              </div>
+              <input
+                type="file"
+                id="update-photo"
+                accept="image/*"
+                class="masque-input"
+              />
+            </div>
+            <h2 id="student-name">Chargement...</h2>
+            <hr />
+            <div class="profile-details">
+              <p>
+                <strong>Faculté:</strong> <span id="student-faculty">-</span>
+              </p>
+              <p>
+                <strong>Programme :</strong> <span id="student-program">-</span>
+              </p>
+              <p><strong>Niveau:</strong> <span id="student-level">-</span></p>
+              <p><strong>Année :</strong> <span id="student-year">-</span></p>
+            </div>
+            <button id="btn-logout" class="btn-danger">Déconnexion</button>
+          </aside>
+
+          <section class="tableau-evenement">
+            <h2>Mes Événements Inscrits</h2>
+            <div id="tableau-liste" class="tableau-grille"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer id="pied">
+      <div>
+        <h1>Menu</h1>
+        <a href="index.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Acceuil</a
+        >
+        <a href="evenements.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Listes des
+          événements</a
+        >
+        <a href="detail.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Détail d'un
+          événement</a
+        >
+        <a href="profil.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Espace étudiant</a
+        >
+        <a href="a-propos.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>À propos</a
+        >
+      </div>
+      <div>
+        <h1>Contactez-nous</h1>
+        <p><ion-icon name="call-outline"></ion-icon>:33697343/31833405</p>
+        <p><ion-icon name="mail-outline"></ion-icon>:eduvent@gmail.com</p>
+
+        <ul>
+          <li>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </li>
+          <li>
+            <ion-icon name="logo-instagram"></ion-icon>
+          </li>
+          <li>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </li>
+          <li>
+            <ion-icon name="logo-youtube"></ion-icon>
+          </li>
+        </ul>
+      </div>
+      <div><p>© 2026 EduEvent — Tous droits réservés</p></div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="js/profil.js"></script>
+  </body>
+</html>

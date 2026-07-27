@@ -1,0 +1,102 @@
+[
+    {
+        "id":1,
+        "titre": "Tournoi Interfacultaire de Football",
+        "categorie": "Sport",
+        "date": "2026-07-28T09:00",
+        "lieu": "CHCL",
+        "image": "tournoi.png",
+        "placesTotal": 500,
+        "placesRestantes": 500,
+        "description":"Un tournoi opposant les équipes des différentes facultés du campus dans une ambiance conviviale et compétitive." ,
+        "organisateur": "BVU"
+    },
+    {
+        "id":2,
+        "titre": "Conférence sur l'IA",
+        "categorie": "Conference",
+        "date": "2026-08-04T10:00",
+        "lieu": "Auditorium CHCL",
+        "image": "coference.png",
+        "placesTotal": 200,
+        "placesRestantes": 200,
+         "description":"Une conférence explorant l'impact de l'intelligence artificielle sur le marché du travail et les compétences de demain.",
+        "organisateur": "FSG"
+    },
+    { 
+        "id":3,
+        "titre": "Festival Culturel : Musique, Danse et Gastronomie",
+        "categorie": "Culture",
+        "date": "2026-08-10T10:00",
+        "lieu": "CHCL",
+        "image": "culture.png",
+        "placesTotal": 400,
+        "placesRestantes": 400,
+         "description":"Une célébration de la richesse culturelle du campus à travers la musique, la danse et la gastronomie locale.",
+        "organisateur": "FSTEAT"
+    },
+    {
+        "id":4,
+        "titre": "Atelier de Développement Web avec HTML, CSS et JavaScript",
+        "categorie": "Atelier",
+        "date": "2026-07-31T10:00",
+        "lieu": "Auditorium CHCL",
+        "image": "Atelier.png",
+        "placesTotal": 200,
+        "placesRestantes": 200,
+         "description":"Un atelier pratique pour apprendre les bases du développement web à travers des exercices concrets.",
+        "organisateur": "FSG"
+    },
+    
+  {
+        "id":5,
+        "titre": "Atelier de Création d'Entreprise et Entrepreneuriat Jeune",
+        "categorie": "Atelier",
+        "date": "2026-08-25T12:00",
+        "lieu": "Auditorium CHCL",
+        "image": "Atelier2.png",
+        "placesTotal": 200,
+        "placesRestantes": 200,
+         "description":"Un atelier pour accompagner les étudiants souhaitant se lancer dans l'entrepreneuriat, de l'idée au premier pas concret.",
+        "organisateur": "BVU"
+
+    },
+    {   
+        "id":6,
+        "titre": "Conférence sur le changement climatique et le Développement Durable",
+        "categorie": "Conference",
+        "date": "2026-08-09T10:00",
+        "lieu": "Auditorium CHCL",
+        "image": "conference2.png",
+        "placesTotal": 200,
+        "placesRestantes": 150,
+         "description":"Une conférence sur les enjeux environnementaux actuels et les actions durables à l'échelle individuelle et collective.",
+        "organisateur": "FSTEAT"
+    },
+   {
+    
+        "id":7,
+        "titre": "Journée Universitaire de Basketball",
+        "categorie": "Sport",
+        "date": "2026-07-28T09:00",
+        "lieu": "S&H",
+        "image": "tournoi2.png",
+        "placesTotal": 500,
+        "placesRestantes": 400,
+         "description":"Une journée sportive dédiée au basketball, ouverte à tous les étudiants passionnés de compétition.",
+        "organisateur": "BVU"
+    },
+   {
+        "id":8,
+        "titre": "Soirée Poésie et Talent des Étudiants",
+        "categorie": "Culture",
+        "date": "2026-08-20T10:00",
+        "lieu": "Auditorium CHCL",
+        "image": "culture2.png",
+        "placesTotal": 200,
+        "placesRestantes": 120,
+         "description":"Une soirée dédiée à l'expression artistique des étudiants : poésie, chant, et autres talents à découvrir.",
+         "organisateur": "BVU"
+}
+
+]

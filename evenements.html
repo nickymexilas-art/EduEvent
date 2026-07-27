@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste des événements — EduEvent</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/responsive.css"
+      media="screen and (max-width:760px)"
+    />
+    <link rel="stylesheet" href="css/animation.css" />
+  </head>
+  <body id="corection">
+    <header>
+      <div id="entete">
+        <img src="images/logoueh.png" alt="EduEvent Logo" class="logo" />
+        <div onclick="affichermenu()" id="btn-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="menu">
+          <nav>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="evenements.html">Listes des événements</a></li>
+              <li><a href="detail.html">Détail d'un événement</a></li>
+              <li><a href="profil.html">Espace étudiant</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a id="contact" href="profil.html">Connexion</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="section">
+      <section class="navigation apparition">
+        <div class="forme-groupe">
+          <label for="search">Rechercher</label>
+          <input type="search" id="search" placeholder="tapez ici" />
+        </div>
+        <div class="forme-groupe">
+          <label for="filtreCategorie">Catégorie</label>
+          <select id="filtreCategorie">
+            <option value="tous">Toutes les catégories</option>
+            <option value="Sport">Sport</option>
+            <option value="Culture">Culture</option>
+            <option value="Atelier">Atelier</option>
+            <option value="Conference">Conférence</option>
+          </select>
+        </div>
+        <div class="forme-groupe">
+          <label for="filtreDate">Date</label>
+          <select id="filtreDate">
+            <option value="toutes">Toutes les dates</option>
+            <option value="aujourdhui">Aujourd'hui</option>
+            <option value="semaine">Cette semaine</option>
+            <option value="mois">Ce mois</option>
+          </select>
+        </div>
+
+        <button id="vueGrille" class="btn-changement active-changement">
+          Grille
+        </button>
+        <button id="vueListe" class="btn-changement">Liste</button>
+      </section>
+
+      <div id="listeEvenements" class="apparition"></div>
+      <p style="text-align: center; margin-top: 25px">
+        <button id="chargement" class="btn-primary">Voir plus</button>
+      </p>
+    </main>
+
+    <footer id="pied">
+      <div>
+        <h1>Menu</h1>
+        <a href="index.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Acceuil</a
+        >
+        <a href="evenements.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Listes des
+          événements</a
+        >
+        <a href="detail.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Détail d'un
+          événement</a
+        >
+        <a href="profil.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>Espace étudiant</a
+        >
+        <a href="a-propos.html">
+          <ion-icon name="arrow-forward-outline"></ion-icon>À propos</a
+        >
+      </div>
+      <div>
+        <h1>Contactez-nous</h1>
+        <p><ion-icon name="call-outline"></ion-icon>:+509 33697343/43378343</p>
+        <p>
+          <ion-icon name="mail-outline"></ion-icon>:eduvent@gmail.com
+        </p>
+
+        <ul>
+          <li>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </li>
+          <li>
+            <ion-icon name="logo-instagram"></ion-icon>
+          </li>
+          <li>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </li>
+          <li>
+            <ion-icon name="logo-youtube"></ion-icon>
+          </li>
+        </ul>
+      </div>
+      <div><p>© 2026 EduEvent — Tous droits réservés</p></div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="js/evenements.js"></script>
+  </body>
+</html>
